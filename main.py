@@ -1,23 +1,22 @@
-# pertama
 import streamlit as st
 import pandas as pd
 
-# Load data from Excel file ok
+# Load data from Excel file
 excel_file_path = "data_dokter.xlsx"  # Ganti dengan path file Excel Anda
 df = pd.read_excel(excel_file_path)
 
 # Set page title
-st.set_page_config(page_title="DISPLAY INFORMASI DOKTER")
+st.set_page_config(page_title="Display Informasi Praktek Dokter")
 
 # Page header
-st.header("INFORMASI PRAKTEK DOKTER")
+st.header("Informasi Praktek Dokter")
 
 # Sidebar untuk filter dokter
 st.sidebar.subheader("Filter Dokter")
 selected_day = st.sidebar.selectbox("Pilih Hari", df["Hari"].unique())
 
-# Filter data berdasarkan hari dan jam yang dipilih
-filtered_df = df(df["Hari"] == selected_day)
+# Filter data berdasarkan hari yang dipilih
+filtered_df = df[df["Hari"] == selected_day]
 
 # Tampilkan data dokter
 st.subheader("Daftar Dokter")
@@ -31,4 +30,4 @@ for index, row in filtered_df.iterrows():
     st.write(f"Status: {'Tutup' if row['Status'] == 'Tutup' else 'Buka'}")
 
 # Informasi tambahan
-st.info("Data di atas adalah informasi praktek dokter berdasarkan hari dan jam yang dipilih.")
+st.info("Data di atas adalah informasi praktek dokter berdasarkan hari yang dipilih.")
