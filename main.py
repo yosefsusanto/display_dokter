@@ -14,7 +14,6 @@ st.header("INFORMASI PRAKTEK DOKTER")
 # Sidebar untuk filter dokter
 st.sidebar.subheader("Filter Dokter")
 selected_day = st.sidebar.selectbox("Pilih Hari", df["Hari"].unique())
-selected_time = st.sidebar.selectbox("Pilih Jam", df["Jam"].unique())
 
 # Filter data berdasarkan hari dan jam yang dipilih
 filtered_df = df[(df["Hari"] == selected_day) & (df["Jam"] == selected_time)]
