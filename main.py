@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-# Load data from Excel file
+# Load data from Excel file ok
 excel_file_path = "data_dokter.xlsx"  # Ganti dengan path file Excel Anda
 df = pd.read_excel(excel_file_path)
 
