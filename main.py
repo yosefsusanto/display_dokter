@@ -6,10 +6,10 @@ excel_file_path = "data_dokter.xlsx"  # Ganti dengan path file Excel Anda
 df = pd.read_excel(excel_file_path)
 
 # Set page title
-st.set_page_config(page_title="Display Informasi Praktek Dokter")
+st.set_page_config(page_title="DISPLAY INFORMASI DOKTER")
 
 # Page header
-st.header("Informasi Praktek Dokter")
+st.header("INFORMASI PRAKTEK DOKTER")
 
 # Sidebar untuk filter dokter
 st.sidebar.subheader("Filter Dokter")
